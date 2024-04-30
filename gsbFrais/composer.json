@@ -1,0 +1,13 @@
+{
+    "name": "christophe/gsbmvcmission1",
+    "description": "gsb misson 1",
+    "authors": [
+        {
+            "name": "chchabin",
+            "email": "christophe.chabin@ac-creteil.fr"
+        }
+    ],
+    "require": {
+        "ext-pdo": "*"
+    }
+}

@@ -1,0 +1,132 @@
+/*Déclaration des variables*/
+:root{
+    --color1: #77AADD;
+    --color2: #000;
+    --color3:brown;
+    --color4:#FFFFFF;
+}
+body {
+    /****layout****/
+    background-color: var(--color1);/* affectation de la variable à la couleur de fond du body */
+    color: #000;
+    margin: 0;
+    padding: 0;
+    /****Structure de la maquette****/
+    display: grid;
+    grid-template-columns: 20% 60% 1fr;
+    grid-template-rows: 1fr 9fr;
+    grid-template-areas:
+            ". . ."
+            ". a .";
+}
+
+.bloc:nth-child(1) {
+    /**** Grid maquette ****/
+    grid-area: a;
+    /**** layout ****/
+    border: 0.1em solid var(--color3);
+    background-color: #FFFFFF;
+    min-height: 80vh;
+    /**** Structure de la presentation ****/
+    display: grid;
+    grid-template:
+            "header header" min-content
+            "menuleft content";
+    grid-template-columns: 150px 1fr;
+}
+
+.header {
+    /**** Grid ****/
+    grid-area: header;
+    /**** flex ****/
+    display: flex;
+    /**** layout ****/
+    background-color:  var(--color1);
+    border: solid 0.1em var(--color3);
+    color: var(--color3);
+    margin: .3em;
+}
+
+.titre {
+    /**** flex ****/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /**** layout ****/
+    padding: 5%;
+}
+
+.menuLeft {
+    /**** Grid ****/
+    grid-area: menuleft;
+    /**** layout ****/
+    background-color: var(--color4);
+}
+.menu-ul{
+    /**** layout ****/
+    padding-left: 10px;
+}
+.menu-item {
+    /**** layout ****/
+    list-style: none;
+    padding: 0;
+
+}
+
+.content {
+    /**** Grid ****/
+    grid-area: content;
+    /**** layout ****/
+    background-color: var(--color4);
+    border-left: solid 0.4em var(--color3);
+    padding-left: 10px;
+}
+
+form {
+    /**** layout ****/
+    background-color: var(--color1);
+    padding: 50px;
+    /*width: 800px;*/
+    color: var(--color4);
+    text-shadow: 0 0 8px var(--color4);
+    text-align: left;
+    margin: .3em;
+}
+table.listeLegere {
+    /*    width:80%;*/
+    margin-bottom : 0.5em;
+}
+
+/* Tableaux quadrillés utilisés pour l'affichage de listes avec contenu léger*/
+table.listeLegere th, table.listeLegere td {
+    border : dotted rgb(178,207,81) 0.1em;
+    padding:0.5em;
+    vertical-align : top;
+    text-align : left;
+}
+
+table.listeLegere caption {
+    font-size : 1.1em;
+    text-align : left;
+    margin-bottom : 0.3em;
+}
+table.listeLegere td {
+    vertical-align:top;
+    font-weight:normal;
+}
+table.listeLegere th.eltForfait{
+    color:black;
+}
+table.listeLegere th.date, table.listeLegere th.montant{
+    width:15%;
+    color:black;
+}
+table.listeLegere th.libelle{
+    width:70%;
+    color:black;
+}
+.encadre{
+    border: solid 0.1em var(--color3);
+    margin-right: 0.1em;
+    margin-bottom: 0.1em;
+}
